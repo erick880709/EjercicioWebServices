@@ -22,5 +22,33 @@ namespace EjercicioWebService.service
         {
             return "Hola a todos";
         }
+
+        [WebMethod]
+        public double SumarNumeros(double num1, double num2)
+        {
+            var resul = num1 + num2;
+            return resul;
+        }
+        /**
+         * Metodo ejemplo de un servicio en asmx donde se reciben 2 numeros tipo doble
+         * 
+         * */
+        [WebMethod]
+        public string SumarNumValidados(double num1,double num2)
+        {
+            string result = "";
+            if (string.IsNullOrEmpty(num1.ToString()) || string.IsNullOrEmpty(num2.ToString()))
+            {
+                result = "Se debe de ingresar un numero para realizar la suma";
+            }
+            else
+            {
+                result = ("El resultado es: " + (num1 + num2).ToString());
+            }
+
+            return result;
+        }
+
+     
     }
 }
