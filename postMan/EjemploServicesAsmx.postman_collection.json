@@ -1,0 +1,45 @@
+{
+	"info": {
+		"_postman_id": "3b5363c9-a8e0-471a-89a6-c72d1754629b",
+		"name": "EjemploServicesAsmx",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "ejemploConsumoSuma",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "text/xml; charset=utf-8",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<soap:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\r\n  <soap:Body>\r\n    <SumarNumeros xmlns=\"http://tempuri.org/\">\r\n      <num1>1</num1>\r\n      <num2>2</num2>\r\n    </SumarNumeros>\r\n  </soap:Body>\r\n</soap:Envelope>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44372/service/Ejemplo.asmx",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44372",
+					"path": [
+						"service",
+						"Ejemplo.asmx"
+					]
+				},
+				"description": "ejemploConsumoSuma"
+			},
+			"response": []
+		}
+	]
+}
